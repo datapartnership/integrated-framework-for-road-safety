@@ -1,0 +1,5 @@
+mercantile==1.2.1
+mapbox-vector-tile
+vt2geojson
+bounding-box
+mapclassify
