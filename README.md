@@ -1,4 +1,4 @@
-# What is this code for
+## What is this code for
 
 ![Tux, the Linux mascot](docs/images/framework.png)
 
@@ -8,33 +8,33 @@ For each road segment, the code will download a street view image by calling the
 The code will then call the image segmentation model, Road Information Collector (RIC), for inferring road characteristics. 
 The output will be fed into the Road Risk Evaluator (RRE), a neural network, which will predict the risk level for each road segment for the ROI.
 
-# Installation
+## Installation
 
 ```{tip}
 Python > 3.6 is required
 ```
 
-## Download mmdetection into the current folder
+### Download mmdetection into the current folder
 
 ```{tip}
 git clone https://github.com/open-mmlab/mmdetection.git
 ```
 
-## Download the trained model from [here](https://drive.google.com/uc?export=download&id=1Por_1B_92_4qjDn67tdP--Sau2DsJC43) and put it in the model folder like this
+### Download the trained model from [here](https://drive.google.com/uc?export=download&id=1Por_1B_92_4qjDn67tdP--Sau2DsJC43) and put it in the model folder like this
 
 ```{tip}
 model/sv1/sv1.pth
 ```
 
-## Install mmdetection following the instructions [here](https://mmdetection.readthedocs.io/en/v2.19.0/get_started.html)
+### Install mmdetection following the instructions [here](https://mmdetection.readthedocs.io/en/v2.19.0/get_started.html)
 
-## Install other requirements
+### Install other requirements
 
 ```
 pip install -r requirements.txt
 ```
 
-# Infer road characteristics for a selected region
+## Infer road characteristics for a selected region
 
 ```
 python inferX.py \
@@ -52,13 +52,13 @@ python inferX.py \
 
 # Predict risk level
 
-## Download the trained RRE model from [here](https://drive.google.com/uc?export=download&id=1_mO_ZPlEjbHIsbAq6L38Ej1CWDHg-Xv9) and save it in the model floder
+### Download the trained RRE model from [here](https://drive.google.com/uc?export=download&id=1_mO_ZPlEjbHIsbAq6L38Ej1CWDHg-Xv9) and save it in the model floder
 
 ```
 model/RRE.sav
 ```
 
-## Run RRE model to predict road risk
+### Run RRE model to predict road risk
 
 ```bash
 python predict.py -p {place_mame} -b '{north west south east}' -m 'model/RRE.sav'
