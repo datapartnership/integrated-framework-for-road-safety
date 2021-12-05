@@ -50,7 +50,7 @@ python inferX.py \
 * {north west south east}: defining a bounding box of interest, in logitude and latitude
 
 
-# Predict risk level
+## Predict risk level
 
 ### Download the trained RRE model from [here](https://drive.google.com/uc?export=download&id=1_mO_ZPlEjbHIsbAq6L38Ej1CWDHg-Xv9) and save it in the model floder
 
