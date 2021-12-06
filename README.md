@@ -1,9 +1,9 @@
-## What is this code for
+## How it works
 
-![Tux, the Linux mascot](docs/images/framework.png)
+![Integrated Framework for Road Safety](https://user-images.githubusercontent.com/51157829/144836156-0aa5e977-82e2-4b94-9da5-f69a018838a2.png)
 
-The user specify a region of interest (ROI) using a boudning box. 
-The code will automatically retrieve this ROI's road network from OpenStreetView.
+The user specifies a region of interest (ROI) using a bounding box. 
+The code will automatically retrieve this ROI's road network from OpenStreetMap.
 For each road segment, the code will download a street view image by calling the Mapillary API.
 The code will then call the image segmentation model, Road Information Collector (RIC), for inferring road characteristics. 
 The output will be fed into the Road Risk Evaluator (RRE), a neural network, which will predict the risk level for each road segment for the ROI.
@@ -47,12 +47,12 @@ python inferX.py \
 
 * mapillary_client_token: Get your Mapillary Client Token from [here](https://www.mapillary.com/dashboard/developers)
 * place_mame: give a name for the region you are interested in
-* {north west south east}: defining a bounding box of interest, in logitude and latitude
+* {north west south east}: defining a bounding box of interest, in longitude and latitude
 
 
 ## Predict risk level
 
-### Download the trained RRE model from [here](https://drive.google.com/uc?export=download&id=1_mO_ZPlEjbHIsbAq6L38Ej1CWDHg-Xv9) and save it in the model floder
+### Download the trained RRE model from [here](https://drive.google.com/uc?export=download&id=1_mO_ZPlEjbHIsbAq6L38Ej1CWDHg-Xv9) and save it in the model folder
 
 ```
 model/RRE.sav
